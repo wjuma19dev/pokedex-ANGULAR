@@ -1,0 +1,6 @@
+<div class="tipos">
+    <span 
+        *ngFor="let tipo of tipos"
+        [class]="'badge bg-'+tipo.toLocaleLowerCase()" 
+        style="margin-right: 5px;" >{{ tipo }}</span>
+</div>

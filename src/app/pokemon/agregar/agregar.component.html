@@ -1,0 +1,57 @@
+<form>
+    <div class="column mt-3">
+        
+        <fieldset>
+            <legend>Quien es tu nuevo Pokemon?</legend>
+        </fieldset>
+
+        <div class="col-6 mb-3">
+            <label for="pokemon_numero">No.</label>
+            <input class="form-control" type="number" name="pokemon_numero">
+        </div>
+
+        <div class="col-6 mb-3">
+            <label for="pokemon_nombre">Nombre</label>
+            <input class="form-control" type="text" name="pokemon_nombre">
+        </div>
+
+        <div class="col-6 mb-3">
+            <label for="pokemon_imagen">Imagen url</label>
+            <input class="form-control" type="text" name="pokemon_imagen">
+        </div>
+
+        <div class="col-6 mb-3">
+            <label for="pokemon_sexo">Sexo</label>
+            <select class="form-control" type="text" name="pokemon_sexo">
+                <option value="seleccionar" default >--Seleccionar--</option>
+                <option value="male">Male</option>
+                <option value="fame">Fame</option>
+            </select>
+        </div>
+
+        <div class="col-6 mb-3">
+            <label for="pokemon_tipo">Tipo</label>
+            <select class="form-control" name="pokemon_tipo">
+                <option value="seleccionar" default >--Seleccionar--</option>
+                <option *ngFor="let tipo of tipos"[value]="tipo">{{ tipo }}</option>
+            </select>
+        </div>
+        <div class="col-6 mb-3">
+            <label for="pokemon_tipo">Debilidad</label>
+            <select class="form-control" name="pokemon_debilidad">
+                <option value="seleccionar" default >--Seleccionar--</option>
+                <option *ngFor="let debilidad of tipos"[value]="debilidad">{{ debilidad }}</option>
+            </select>
+        </div>
+
+        <div class="col-6 mt-3">
+            <label for="pokemon_descripcion">Descripción</label>
+            <textarea name="pokemon_descripcion" cols="30" rows="6" class="form-control"></textarea>
+        </div>
+
+        <div class="col-6 mt-3">
+            <button class="btn btn-primary" type="submit">Agregar al Pokedex</button>
+        </div>
+
+    </div>
+</form>

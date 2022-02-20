@@ -1,0 +1,50 @@
+<div class="row">
+
+    <div class="col-12 mt-5">
+        <h1>
+            {{ pokemon?.nombre | titlecase }} 
+            <small class="lead">
+                No. {{ pokemon?.id }}
+            </small>
+        </h1>
+    </div>
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-5">
+                <img [src]="pokemon?.fullUrl" [alt]="pokemon?.nombre"> 
+            </div>
+            <div class="col-5">
+                <h3 class="mb-3"> {{ pokemon?.descripcion }} </h3>
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                      <div class="row">
+                          <div class="col-6">
+                              <p class="mb-0">Altura</p>
+                              <h4>{{ pokemon?.detalles?.altura }}</h4>
+                              <p class="mb-0">Peso</p>
+                              <h4>{{ pokemon?.detalles?.peso }}</h4> 
+                              <p class="mb-0">Sexo</p> 
+                              <h4>{{ pokemon?.detalles?.sexo }}</h4>
+                          </div>
+                          <div class="col-6">
+                              <p class="mb-0">Categoría</p>
+                              <h4>{{ pokemon?.detalles?.categoria }}</h4>
+                              <p class="mb-0">Habilidad</p>
+                              <h4>{{ pokemon?.detalles?.habilidad }}</h4>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h3 class="mb-1">Tipo</h3>
+                    <app-badge-tipos [tipos]="pokemon ? pokemon.tipos : []"></app-badge-tipos>
+                </div>
+                <div class="mb-3">
+                    <h3 class="mb-1">Debilidad</h3>
+                    <app-badge-tipos [tipos]="pokemon ? pokemon.debilidades : []"></app-badge-tipos>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

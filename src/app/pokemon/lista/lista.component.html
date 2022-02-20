@@ -1,0 +1,18 @@
+<div class="row mt-3">
+
+    <div class="col-3" *ngFor="let pokemon of pokemons">
+        <div class="card pokemon">
+            <div class="card-body">
+                <a [routerLink]="pokemon.nombre">
+                    <img [src]="pokemon.imagenUrl" alt="" style="width: 100%;" class="pokemon__avatar">
+                </a>
+                <hr>
+                <p class="mb-0 pokemon__numero">No. {{ pokemon.id }}</p>
+                <h5 class="card-title pokemon__nombre">{{ pokemon.nombre | titlecase }}</h5>
+
+                <app-badge-tipos [tipos]="pokemon.tipos"></app-badge-tipos>
+            </div>
+        </div>
+    </div>
+
+</div>
