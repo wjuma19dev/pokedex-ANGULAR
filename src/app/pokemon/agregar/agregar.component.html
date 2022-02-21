@@ -1,56 +1,95 @@
-<form>
+<form [formGroup]="agregarPokemonForm" (ngSubmit)="onSubmit(agregarPokemonForm)">
     <div class="column mt-3">
         
         <fieldset>
             <legend>Quien es tu nuevo Pokemon?</legend>
         </fieldset>
 
-        <div class="col-6 mb-3">
-            <label for="pokemon_numero">No.</label>
-            <input class="form-control" type="number" name="pokemon_numero">
-        </div>
-
-        <div class="col-6 mb-3">
-            <label for="pokemon_nombre">Nombre</label>
-            <input class="form-control" type="text" name="pokemon_nombre">
-        </div>
-
-        <div class="col-6 mb-3">
-            <label for="pokemon_imagen">Imagen url</label>
-            <input class="form-control" type="text" name="pokemon_imagen">
-        </div>
-
-        <div class="col-6 mb-3">
-            <label for="pokemon_sexo">Sexo</label>
-            <select class="form-control" type="text" name="pokemon_sexo">
-                <option value="seleccionar" default >--Seleccionar--</option>
-                <option value="male">Male</option>
-                <option value="fame">Fame</option>
-            </select>
-        </div>
-
-        <div class="col-6 mb-3">
-            <label for="pokemon_tipo">Tipo</label>
-            <select class="form-control" name="pokemon_tipo">
-                <option value="seleccionar" default >--Seleccionar--</option>
-                <option *ngFor="let tipo of tipos"[value]="tipo">{{ tipo }}</option>
-            </select>
-        </div>
-        <div class="col-6 mb-3">
-            <label for="pokemon_tipo">Debilidad</label>
-            <select class="form-control" name="pokemon_debilidad">
-                <option value="seleccionar" default >--Seleccionar--</option>
-                <option *ngFor="let debilidad of tipos"[value]="debilidad">{{ debilidad }}</option>
-            </select>
-        </div>
-
-        <div class="col-6 mt-3">
-            <label for="pokemon_descripcion">Descripción</label>
-            <textarea name="pokemon_descripcion" cols="30" rows="6" class="form-control"></textarea>
-        </div>
-
-        <div class="col-6 mt-3">
-            <button class="btn btn-primary" type="submit">Agregar al Pokedex</button>
+        <div class="row">
+            <div class="col-6">
+                <h3>Datos generales</h3>
+                <div class="col-12 mb-3">
+                    <label for="numero">No.</label>
+                    <input formControlName="numero" class="form-control" type="text" name="numero">
+                </div>
+        
+                <div class="col-12 mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input formControlName="nombre" class="form-control" type="text" name="nombre">
+                </div>
+        
+                <div class="col-12 mb-3">
+                    <label for="imagenes">Imagenes urls</label>
+                    <input formControlName="imagenes" class="form-control" type="text" name="imagenes">
+                </div>
+        
+                <div class="col-12 mb-3">
+                    <label for="pokemon_tipo">Tipo</label>
+                    <select formControlName="tipos" class="form-control" name="pokemon_tipo">
+                        <option value="seleccionar" default >--Seleccionar--</option>
+                        <option *ngFor="let tipo of tipos"[value]="tipo">{{ tipo }}</option>
+                    </select>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="pokemon_tipo">Debilidad</label>
+                    <select formControlName="debilidad" class="form-control" name="pokemon_debilidad">
+                        <option value="seleccionar" default >--Seleccionar--</option>
+                        <option *ngFor="let debilidad of tipos"[value]="debilidad">{{ debilidad }}</option>
+                    </select>
+                </div>
+        
+                <div class="col-12 mt-3">
+                    <label for="pokemon_descripcion">Descripción</label>
+                    <textarea formControlName="descripcion" name="pokemon_descripcion" cols="30" rows="6" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-6" formGroupName="habilidades">
+                <h3>Información de las habilidades</h3>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="altura">Altura</label>
+                            <input formControlName="altura" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="peso">Peso</label>
+                            <input formControlName="peso" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="categoria">Categoria</label>
+                            <input formControlName="categoria" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="habilidad">Habilidad</label>
+                            <input formControlName="habilidad" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="pokemon_sexo">Sexo</label>
+                        <div class="form-check">
+                            <input formControlName="female" class="form-check-input" type="checkbox" name="female" id="flexRadioDefault1">
+                            <label class="form-check-label" for="female">
+                              Female
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input formControlName="male" class="form-check-input" type="checkbox" name="male" id="flexRadioDefault1">
+                            <label class="form-check-label" for="male">
+                              Male
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button [disabled]="!agregarPokemonForm.valid" class="btn btn-danger" type="submit">Agregar al Pokedex</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

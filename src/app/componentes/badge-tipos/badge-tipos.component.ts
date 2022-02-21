@@ -7,5 +7,5 @@ import { Tipo } from 'src/app/pokemon/pokemon.interface';
   styleUrls: ['./badge-tipos.component.css']
 })
 export class BadgeTiposComponent {
-  @Input() tipos: Tipo[] = [];
+  @Input() tipos: Tipo[] | undefined;
 }

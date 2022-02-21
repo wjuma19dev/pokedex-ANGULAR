@@ -1,0 +1,50 @@
+[
+    {
+        "id": "001",
+        "imagenUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
+        "fullUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+        "nombre": "bulbasaur",
+        "tipos": ["PLANTA", "VENENO"],
+        "descripcion": "Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo.",
+        "debilidades": ["FUEGO", "PSIQUICO", "VOLADOR", "HIELO"],
+        "detalles": {
+            "altura": "0,7 m",
+            "peso": "6,9 kg",
+            "sexo": ["f", "m"],
+            "categoria": ["Semilla"],
+            "habilidad": ["Esperusa"]
+        }
+    },
+    {
+        "id": "006",
+        "imagenUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png",
+        "fullUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+        "nombre": "charizard",
+        "tipos": ["FUEGO", "VOLADOR"],
+        "descripcion": "Escupe un fuego tan caliente que funde las rocas. Causa incendios forestales sin querer.",
+        "debilidades": ["AGUA", "ELECTRICO", "ROCA"],
+        "detalles": {
+            "altura": "1,7 m",
+            "peso": "90,5 kg",
+            "sexo": ["f", "m"],
+            "categoria": ["Llama"],
+            "habilidad": ["Mar Llamas"]
+        }
+    },
+    {
+        "id": "029",
+        "imagenUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/029.png",
+        "fullUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/029.png",
+        "nombre": "nidoran",
+        "tipos": ["VENENO"],
+        "descripcion": "Posee un olfato más fino que los Nidoran♂. Usa los bigotes para percibir la dirección del viento y buscar comida a sotavento de sus depredadores.",
+        "debilidades": ["PSIQUICO", "TIERRA"],
+        "detalles": {
+            "altura": "0,4 m",
+            "peso": "7,0 kg",
+            "sexo": ["f"],
+            "categoria": ["Pin Veneno"],
+            "habilidad": ["Punto Tóxico", "Rivalidad"]
+        }
+    }
+]

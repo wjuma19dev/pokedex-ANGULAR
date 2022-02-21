@@ -1,0 +1,31 @@
+<div class="card text-white bg-secondary mb-3 habilidades">
+    <div class="card-body">
+      <div class="row">
+          <div class="col-6">
+              <p class="mb-0">Altura</p>
+              <h4 class="habilidades__h4">{{ pokemon?.detalles?.altura }}</h4>
+              <p class="mb-0">Peso</p>
+              <h4 class="habilidades__h4">{{ pokemon?.detalles?.peso }}</h4> 
+              <p class="mb-0">Sexo</p> 
+              <h4 class="habilidades__h4">
+                  <span *ngIf="pokemon?.detalles?.sexo?.includes('f')">
+                      <i class="bi bi-gender-female"></i>
+                    </span>
+                    <span *ngIf="pokemon?.detalles?.sexo?.includes('m')">
+                        <i class="bi bi-gender-male"></i>
+                    </span>
+              </h4>
+          </div>
+          <div class="col-6">
+              <p class="mb-0">Categoría</p>
+              <h4 class="habilidades__h4">{{ pokemon?.detalles?.categoria }}</h4>
+              <p class="mb-0">Habilidades</p>
+                <h4 class="habilidades__h4">
+                    <ul>
+                        <li *ngFor="let habilidad of pokemon?.detalles?.habilidad">{{ habilidad }}</li>
+                    </ul>
+                </h4>
+          </div>
+      </div>
+    </div>
+</div>

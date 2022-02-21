@@ -10,15 +10,17 @@ import { PokemonService } from '../pokemon.service';
 export class ListaComponent implements OnInit {
 
   pokemons: Pokemon[] = [];
+  public loading: boolean = false;
 
   constructor( private pokemonService: PokemonService ) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.pokemonService.find()
-      .then(pokemons => {
+      .subscribe((pokemons: Pokemon[]) => {
         this.pokemons = pokemons;
-        console.log(pokemons);
-      });
+        setTimeout(() => this.loading = false, 500);
+      })
   }
 
 }

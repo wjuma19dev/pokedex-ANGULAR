@@ -11,7 +11,7 @@ export interface Pokemon {
         peso: string;
         sexo: [string, string],
         categoria: [string];
-        habilidad: string;
+        habilidad: [string];
     }
 }
 

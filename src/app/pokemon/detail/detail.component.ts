@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Pokemon } from '../pokemon.interface';
 import { PokemonService } from '../pokemon.service';
 
@@ -8,9 +9,11 @@ import { PokemonService } from '../pokemon.service';
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnDestroy {
 
-  pokemon: Pokemon | undefined;
+  public pokemon: Pokemon | undefined;
+  private pokemonSubscription: Subscription | undefined;
+  public loading: boolean = false;
 
   constructor( 
     private route: ActivatedRoute,
@@ -19,7 +22,7 @@ export class DetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    this.loading = true;
     this.route.paramMap
       .subscribe(paramMap => {
         const nombre: string | null = paramMap.get('nombre');
@@ -27,13 +30,16 @@ export class DetailComponent implements OnInit {
           this.router.navigateByUrl('/pokedex');
         } else {
           this.pokemonService.findOne(nombre)
-            .then((pokemon: Pokemon | undefined) => {
+            .subscribe(pokemon => {
               this.pokemon = pokemon;
-              console.log(this.pokemon);
-            });
+              setTimeout(() => this.loading = false, 500);
+            })
         }
       });
-    
+  }
+
+  ngOnDestroy(): void {
+      this.pokemonSubscription?.unsubscribe();
   }
 
 }

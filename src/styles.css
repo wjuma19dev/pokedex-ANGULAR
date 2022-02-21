@@ -1,4 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.titlecase {
+    font-weight: 900;
+}
+
+.descripcion {
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.h3 {
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
+.form-check-input:checked {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #dc3545;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #dc3545b5;
+}
 
 .bg-fuego {
     background: -webkit-linear-gradient(180deg, #F76E11 50%, #F76E11 50%);
@@ -77,4 +114,13 @@
     background: linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
     background-color: #a38c21;
     color: #fff;
+}
+.bg-tierra {
+    background: -webkit-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background: -ms-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background: -moz-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background: -o-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background-color: #f7de3f;
+    color: #212121;
 }
