@@ -13,7 +13,7 @@ export class PokemonService {
     }
     
     create(pokemon: Pokemon): void {
-       
+        console.log(pokemon);
     }
 
     findOne(nombre: string): Observable<Pokemon | undefined> {

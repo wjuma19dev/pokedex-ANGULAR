@@ -9,7 +9,10 @@ export interface Pokemon {
     detalles: {
         altura: string;
         peso: string;
-        sexo: [string, string],
+        genero: {
+            female: boolean,
+            male: boolean
+        },
         categoria: [string];
         habilidad: [string];
     }

@@ -10,7 +10,10 @@
         "detalles": {
             "altura": "0,7 m",
             "peso": "6,9 kg",
-            "sexo": ["f", "m"],
+            "genero": {
+                "female": true,
+                "male": true
+            },
             "categoria": ["Semilla"],
             "habilidad": ["Esperusa"]
         }
@@ -26,7 +29,10 @@
         "detalles": {
             "altura": "1,7 m",
             "peso": "90,5 kg",
-            "sexo": ["f", "m"],
+            "genero": {
+                "female": true,
+                "male": true
+            },
             "categoria": ["Llama"],
             "habilidad": ["Mar Llamas"]
         }
@@ -42,7 +48,10 @@
         "detalles": {
             "altura": "0,4 m",
             "peso": "7,0 kg",
-            "sexo": ["f"],
+            "genero": {
+                "female": true,
+                "male": false
+            },
             "categoria": ["Pin Veneno"],
             "habilidad": ["Punto Tóxico", "Rivalidad"]
         }

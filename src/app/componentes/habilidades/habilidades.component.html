@@ -8,10 +8,10 @@
               <h4 class="habilidades__h4">{{ pokemon?.detalles?.peso }}</h4> 
               <p class="mb-0">Sexo</p> 
               <h4 class="habilidades__h4">
-                  <span *ngIf="pokemon?.detalles?.sexo?.includes('f')">
+                  <span *ngIf="pokemon?.detalles?.genero?.female">
                       <i class="bi bi-gender-female"></i>
                     </span>
-                    <span *ngIf="pokemon?.detalles?.sexo?.includes('m')">
+                    <span *ngIf="pokemon?.detalles?.genero?.male">
                         <i class="bi bi-gender-male"></i>
                     </span>
               </h4>
