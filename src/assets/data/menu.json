@@ -1,0 +1,32 @@
+[
+    { 
+        "icon": "bi-house-door",
+        "ancla": "inicio",
+        "redirectTo": "/inicio"
+    },
+    { 
+        "icon": "bi-slash-circle",
+        "ancla": "pokedex",
+        "redirectTo": "/pokedex"
+    },
+    { 
+        "icon": "bi-app-indicator",
+        "ancla": "aplicaciones",
+        "redirectTo": "/aplicaciones"
+    },
+    { 
+        "icon": "bi-tv",
+        "ancla": "tv pokemon",
+        "redirectTo": "/tv"
+    },
+    { 
+        "icon": "bi-file-earmark-music",
+        "ancla": "timbres",
+        "redirectTo": "/timbres"
+    },
+    { 
+        "icon": "bi-dpad",
+        "ancla": "juegos",
+        "redirectTo": "/juegos"
+    }
+]

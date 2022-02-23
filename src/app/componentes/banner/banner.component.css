@@ -1,0 +1,22 @@
+.banner {
+    height: 120px;
+    background-color: #EFEFEF;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link:active,
+.nav-item .nav-link.active {
+    color: #dc3545;
+}
+
+.titulo {
+    font-weight: 900;
+}
+
+.titulo .lead {
+    font-size: 14px;
+}
+
+.bi {
+    font-size: 2rem;
+}

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BadgeTiposComponent } from './badge-tipos/badge-tipos.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { LoaderComponent } from './loader/loader.component';
+import { BannerComponent } from './banner/banner.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,15 +12,18 @@ import { LoaderComponent } from './loader/loader.component';
   declarations: [
     BadgeTiposComponent,
     HabilidadesComponent,
-    LoaderComponent
+    LoaderComponent,
+    BannerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     BadgeTiposComponent,
     HabilidadesComponent,
-    LoaderComponent
+    LoaderComponent,
+    BannerComponent
   ]
 })
 export class ComponentesModule { }

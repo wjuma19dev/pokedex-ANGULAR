@@ -4,10 +4,12 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { ComponentesModule } from "../componentes/componentes.module";
 import { NavegacionComponent } from "../navegacion/navegacion.component";
+import { AdminComponent } from "./admin/admin.component";
 import { AgregarComponent } from "./agregar/agregar.component";
 import { DetailComponent } from "./detail/detail.component";
 import { ItemComponent } from "./item/item.component";
 import { ListaComponent } from "./lista/lista.component";
+import { PokemonRoutingModule } from "./pokemon-routing.module";
 import { PokemonComponent } from "./pokemon.component";
 
 const components: any[] = [
@@ -16,7 +18,8 @@ const components: any[] = [
     ItemComponent,
     ListaComponent,
     PokemonComponent,
-    NavegacionComponent
+    NavegacionComponent,
+    AdminComponent
 ]
 
 @NgModule({
@@ -25,7 +28,8 @@ const components: any[] = [
         RouterModule,
         CommonModule,
         ComponentesModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        PokemonRoutingModule
     ],
     exports: components
 })

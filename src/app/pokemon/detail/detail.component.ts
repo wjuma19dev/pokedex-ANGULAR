@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Pokemon } from '../pokemon.interface';
@@ -18,7 +19,8 @@ export class DetailComponent implements OnInit, OnDestroy {
   constructor( 
     private route: ActivatedRoute,
     private router: Router,
-    private pokemonService: PokemonService 
+    private pokemonService: PokemonService,
+    private titleService: Title 
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +28,12 @@ export class DetailComponent implements OnInit, OnDestroy {
     this.route.paramMap
       .subscribe(paramMap => {
         const nombre: string | null = paramMap.get('nombre');
+        let nombreSplit: String[] | undefined | string = nombre?.split('');
+        if (nombreSplit) {
+          nombreSplit[0] = nombreSplit[0].toUpperCase();
+          nombreSplit = nombreSplit.join('');
+        }
+        this.titleService.setTitle(`${nombreSplit} | Pokédex`);
         if (!nombre) {
           this.router.navigateByUrl('/pokedex');
         } else {
@@ -40,6 +48,7 @@ export class DetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
       this.pokemonSubscription?.unsubscribe();
+      this.titleService.setTitle(`Pokédex`);
   }
 
 }

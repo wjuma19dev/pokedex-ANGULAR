@@ -1,0 +1,27 @@
+<div class="row mt-3">
+    <div class="col-3" *ngFor="let pokemon of pokemons">
+        <div class="card">
+            <img class="card-img-top" [src]="pokemon.imagenUrl">
+            <div class="card-block">
+                <figure class="profile">
+                    <img [src]="pokemon.fullUrl" class="profile-avatar" alt="">
+                </figure>
+                <h4 class="card-title mt-3 mb-0 text-danger">{{pokemon.nombre | titlecase}}</h4>
+                <div class="meta">
+                    <app-badge-tipos [tipos]="pokemon.tipos"></app-badge-tipos>
+                </div>
+                <div class="card-text">
+                    {{pokemon.descripcion.slice(0, 100)}} ...
+                </div>
+            </div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <small>Last updated 3 mins ago</small>
+                <div>
+                    <!-- <a href="" style="margin-right: 10px; text-decoration: none;" class="text-danger">Editar</a> -->
+                    <button  style="margin-right: 5px" class="btn btn-outline-danger float-right btn-sm"><i class="bi bi-pencil"></i></button>
+                    <button class="btn btn-danger float-right btn-sm"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

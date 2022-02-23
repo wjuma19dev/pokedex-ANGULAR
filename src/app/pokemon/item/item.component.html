@@ -5,7 +5,7 @@
         </a>
         <hr>
         <p class="mb-0 pokemon__numero">No. {{ pokemon?.id }}</p>
-        <h5 class="card-title pokemon__nombre titlecase">{{ pokemon?.nombre | titlecase }}</h5>
+        <h5 class="card-title pokemon__nombre titlecase text-danger">{{ pokemon?.nombre | titlecase }}</h5>
         <app-badge-tipos [tipos]="pokemon?.tipos"></app-badge-tipos>
     </div>
 </div>

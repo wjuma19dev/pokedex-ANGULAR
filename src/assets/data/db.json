@@ -55,5 +55,24 @@
             "categoria": ["Pin Veneno"],
             "habilidad": ["Punto Tóxico", "Rivalidad"]
         }
+    },
+    {
+        "id": "025",
+        "imagenUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png",
+        "fullUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+        "nombre": "pikachu",
+        "tipos": ["ELECTRICO"],
+        "descripcion": "Cuanto más potente es la energía eléctrica que genera este Pokémon, más suaves y elásticas se vuelven las bolsas de sus mejillas.",
+        "debilidades": ["TIERRA"],
+        "detalles": {
+            "altura": "0,4 m",
+            "peso": "6,0 kg",
+            "genero": {
+                "female": true,
+                "male": true
+            },
+            "categoria": ["Ratón"],
+            "habilidad": ["Electricidad", "Estática"]
+        }
     }
 ]
